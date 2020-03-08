@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
@@ -20,5 +21,10 @@ public class ConfigurationShopp {
 		DB database = mongoClient.getDB("shopp");
 		DBCollection collection = database.getCollection("collection1");
 		return collection;
+	}
+	
+	@Bean
+	public 	Gson returnGsonBean() {
+		return new Gson();
 	}
 }

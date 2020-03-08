@@ -1,5 +1,7 @@
 package com.asmaayni.shopp;
 
+import java.util.Collections;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +14,9 @@ public class App
 	    
 
 	    public static void main(String[] args) {
-	    	SpringApplication.run(App.class, args);
+	    	SpringApplication app = new SpringApplication(App.class);
+	    	app.setDefaultProperties(Collections
+	    	          .singletonMap("server.port", "8083"));
+	    	        app.run(args);
 	    }
 }
