@@ -1,4 +1,4 @@
-package com.asmaayni.shopp.service.impl;
+package com.asmaayni.customer.service.impl;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.asmaayni.shopp.common.Customer;
-import com.asmaayni.shopp.controller.CustomerController;
-import com.asmaayni.shopp.service.CustomerService;
-import com.asmaayni.shopp.utils.Utils;
+import com.asmaayni.customer.common.Customer;
+import com.asmaayni.customer.controller.CustomerController;
+import com.asmaayni.customer.service.CustomerService;
+import com.asmaayni.customer.utils.Utils;
 import com.mongodb.DBCollection;
 
 @Component

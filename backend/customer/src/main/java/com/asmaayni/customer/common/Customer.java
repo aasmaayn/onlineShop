@@ -1,4 +1,4 @@
-package com.asmaayni.shopp.common;
+package com.asmaayni.customer.common;
 
 public class Customer {
 	private String id;

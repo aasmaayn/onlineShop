@@ -1,8 +1,8 @@
-package com.asmaayni.shopp.service;
+package com.asmaayni.customer.service;
 
 import java.util.List;
 
-import com.asmaayni.shopp.common.Customer;
+import com.asmaayni.customer.common.Customer;
 
 
 public interface CustomerService {

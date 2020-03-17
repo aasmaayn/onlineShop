@@ -1,4 +1,4 @@
-package com.asmaayni.shopp.controller;
+package com.asmaayni.transaction.controller;
 
 import java.util.List;
 
@@ -14,28 +14,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.asmaayni.shopp.common.Customer;
-import com.asmaayni.shopp.service.CustomerService;
+import com.asmaayni.transaction.common.Transaction;
+import com.asmaayni.transaction.service.TransactionService;
 
 
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/transaction")
 public class CustomerController {
     Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
     @Autowired
-    private CustomerService customerService;
+    private TransactionService customerService;
     
     @PostMapping(value = "/find", produces= MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Customer>> find(@RequestBody Customer customer) {
-    	List<Customer> response = customerService.findCustomer(customer);
+    public ResponseEntity<List<Transaction>> find(@RequestBody Transaction customer) {
+    	List<Transaction> response = customerService.findCustomer(customer);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     
     @PostMapping(value = "/commit", produces= MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Customer> add(@RequestBody Customer customer) {
-    	Customer response;
+    public ResponseEntity<Transaction> add(@RequestBody Transaction customer) {
+    	Transaction response;
 		try {
 			response = customerService.persistCustomer(customer);
 			return new ResponseEntity<>(response, HttpStatus.OK);
